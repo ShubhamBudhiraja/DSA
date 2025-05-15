@@ -1,13 +1,6 @@
 // root before children
-class Node {
-    value = null;
-    left = null;
-    right = null;
 
-    constructor(val) {
-        this.value = val;
-    }
-}
+import { Node } from "./common.js";
 
 const preorderTraversal = (root) => {
     console.log(root.value);

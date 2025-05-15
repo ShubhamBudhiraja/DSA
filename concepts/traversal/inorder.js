@@ -1,13 +1,6 @@
 // root in-between
-class Node {
-    value = null;
-    left = null;
-    right = null;
 
-    constructor(val) {
-        this.value = val;
-    }
-}
+import { Node } from "./common.js";
 
 const inorderTraversal = (root) => {
     if (root.left) inorderTraversal(root.left);

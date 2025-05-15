@@ -1,13 +1,5 @@
 // root after children
-class Node {
-    value = null;
-    left = null;
-    right = null;
-
-    constructor(val) {
-        this.value = val;
-    }
-}
+import { Node } from "./common.js";
 
 const postorderTraversal = (root) => {
     if (root.left) postorderTraversal(root.left);
