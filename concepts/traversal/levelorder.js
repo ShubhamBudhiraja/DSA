@@ -7,8 +7,9 @@ const levelOrdertraversal = (root) => {
     let level = 0;
 
     while (queue.length) {
+        let l = queue.length;
         result.push([]);
-        for (let i = 0; i < result.length; i++) {
+        for (let i = 0; i < l; i++) {
             const node = queue.shift();
             result[level].push(node.value);
 
@@ -25,8 +26,9 @@ const levelOrdertraversal = (root) => {
 const root = new Node(2);
 root.right = new Node(3);
 root.left = new Node(1);
-root.left.left = new Node(12);
-root.left.left.left = new Node(5);
-root.left.left.right = new Node(6);
+root.left.right = new Node(5);
+root.left.left = new Node(4);
+root.right.right = new Node(7);
+root.right.left = new Node(6);
 
 console.log(levelOrdertraversal(root));
