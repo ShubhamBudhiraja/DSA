@@ -1,4 +1,4 @@
-import { Node } from "../../concepts/traversal/common.js";
+import { Node } from "../../concepts/tree/common.js";
 
 // zigzag tree traversal
 const zigzagTraversal = (root) => {
