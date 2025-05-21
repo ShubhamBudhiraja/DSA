@@ -3,9 +3,9 @@ import { Node } from "../../concepts/tree/common.js";
 const checkIdentical = (root1, root2) => {
     if (!root1 && !root2) return true;
     if (!root1 || !root2) return false;
-    if (root1.value !== root2.value) return false;
 
     return (
+        root1.value === root2.value &&
         checkIdentical(root1.left, root2.left) &&
         checkIdentical(root1.right, root2.right)
     );
