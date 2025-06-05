@@ -2,16 +2,17 @@
 // such that the sum of the values along the path equals targetSum
 import { Node } from "../../concepts/tree/common.js";
 
-const checkPath = (root, target) => {
-    if (target < 0) return false;
-    if (target === 0) return true;
+const hasPathSum = (root, target) => {
+    if (!root) return false;
 
-    if (root)
-        return (
-            checkPath(root?.left, target - root?.value) ||
-            checkPath(root?.right, target - root?.value)
-        );
-    return false;
+    if (!root.left && !root.right) {
+        return target === root.value;
+    }
+
+    return (
+        hasPathSum(root.left, target - root.value) ||
+        hasPathSum(root.right, target - root.value)
+    );
 };
 
 const root = new Node(5);
